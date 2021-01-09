@@ -35,7 +35,15 @@ body{
 .navbar-2 .navbar .navbar-brand img{
     width: 250px;
 }
+.navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu{
+    background-color: #00316d;
+}
+.navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item{
+    color: white;
+    padding: 10px 70px 10px 10px;
+}
 
+/* INDEX PAGE */
 .carousel-1{
     margin-top: 70px;
 }
@@ -108,6 +116,34 @@ body{
     font-size: 15px;
 }
 
+/* ABOUT PAGE */
+.carousel-2 .c-index-2 .carousel-inner .carousel-item img{
+    margin-top: 70px;
+    object-fit: cover;
+}
+.carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption::after{
+    padding: 20px;
+    background-color: #000000;
+    opacity: 10.0%;
+    z-index: 0;
+}
+.carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption{
+    z-index: 1;
+    /* margin-bottom: 160px; */
+}
+.carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption h5{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+.carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption .c-line-title-2{
+    color:  #e67e22;
+    width: 10px;
+}
+.intro .text-intro{
+    font-size: 14px;
+}
+
 
 /* DEKSTOP VERSI */
 @media (min-width: 992px) {
@@ -168,14 +204,25 @@ body{
     #navigarion-bar a:hover{
         color: white;
     }
-    .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu{
-        background-color: #00316d;
-    }
-    .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item{
-        color: white;
-        padding: 10px 70px 10px 10px;
-    }
+    
     .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
         background-color: transparent !important;
+    }
+
+    /* ABOUT PAGE */
+    .carousel-2 .c-index-2 .carousel-inner .carousel-item img{
+        height: 500px;
+        margin-top: 118px;
+        object-fit: cover;
+    }
+    .carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption{
+        z-index: 1;
+        margin-bottom: 200px;
+    }
+    .carousel-2 .c-index-2 .carousel-inner .carousel-item .carousel-caption h5{
+        font-size: 40px;
+    }
+    .intro .text-intro{
+        font-size: 18px;
     }
 }    

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="carousel-2 mb-4">
+    <div id="carouselExampleCaptions" class="carousel slide c-index-2" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.itb.ac.id/files/cover/about-itb.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption text-start ">
+                    <h5><span class="c-line-title-2">|</span> &nbsp;{{ title }}</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.itb.ac.id/files/cover/Img_slider_2.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption text-start">
+                    <h5><span class="c-line-title-2">|</span> &nbsp;{{ title }}</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.itb.ac.id/files/cover/Img_slider_3.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption text-start">
+                    <h5><span class="c-line-title-2">|</span> &nbsp;{{ title }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="intro mb-4">
+    <div class="container">
+        <p class="text-intro">Institut Teknologi Bandung (ITB) merupakan sekolah tinggi teknik pertama di Indonesia yang
+            didirikan pada
+            tanggal
+            2 Maret 1959 di Jawa Barat yang mengemban misi pengabdian ilmu pengetahuan dan teknologi untuk memajukan
+            Indonesia. Lahir dalam suasana penuh dinamika yang dilandasi dengan semangat perjuangan Proklamasi
+            Kemerdekaan,
+            ITB hadir untuk mengoptimalkan pembangunan bangsa yang maju dan bermartabat.</p>
+    </div>
+</section>
+
+<section class="profile">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <h2 class="font-size-08 font-02 font-weight-bold text-center">
+                    Profil
+                </h2>
+            </div>
+            <div class="col-12 text-center">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/V4B82wgFc_U" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

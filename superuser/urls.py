@@ -22,6 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
+    path('about/',views.about,name='about'),
+    path('faculty/',views.faculty,name='faculty'),
     path('detail-info/<int:id>',views.detail_info,name='detail-info'),
 ]
 
