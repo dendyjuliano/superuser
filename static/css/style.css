@@ -47,8 +47,9 @@ body{
 }
 
 .font-size-08{
-    font-size: 40px;
-    font-weight: 400 !important;
+    font-size: 20px;
+    font-weight: bold !important;
+    text-align: left !important;
 }
 
 .info-1{
@@ -56,7 +57,7 @@ body{
 }
 
 .text-info-1{
-    font-size: 18px;
+    font-size: 13px;
     text-align: left;
 }
 
@@ -116,6 +117,11 @@ body{
     .navbar-2 .navbar .navbar-brand img{
         width: 300px;
     }
+    .font-size-08{
+        font-size: 40px;
+        font-weight: 400 !important;
+        text-align: center !important;
+    }
     .info-panel{
         border-radius: 5px;
         margin-top: -50px;
@@ -128,9 +134,48 @@ body{
         font-size: 14px;
         line-height: 18px;
     }
+    .text-info-1{
+        font-size: 18px;
+        text-align: left;
+    }
     .address-info{
         font-size: 12px;
         color: #555555;
         display: block;
+    }
+    #navigation-bar a {
+        text-decoration: none;
+        position: relative;
+        transition: all 0.4s ease;
+     }
+    #navigation-bar a::before {
+        content: "";
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 2px;
+        color: white;
+        background-color: #e67e22;
+    }
+    #navigation-bar a:hover::before {
+        right: 0;
+        left: 0;
+        color: white;
+    }
+
+    #navigarion-bar a:hover{
+        color: white;
+    }
+    .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu{
+        background-color: #00316d;
+    }
+    .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item{
+        color: white;
+        padding: 10px 70px 10px 10px;
+    }
+    .navbar-2 .navbar .collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+        background-color: transparent !important;
     }
 }    

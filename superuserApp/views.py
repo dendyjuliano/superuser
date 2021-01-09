@@ -18,7 +18,7 @@ def index(request):
       'videos':video,
       'sponsor':sponsor,
    }
-   return render(request,'base.html',conteks)
+   return render(request,'index.html',conteks)
 
 def detail_info(request):
    pass
