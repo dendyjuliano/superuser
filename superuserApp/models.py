@@ -40,10 +40,9 @@ class News(models.Model):
     
 class Vidios(models.Model):
     video = EmbedVideoField()
-    slug = models.SlugField(max_length=200, db_index=True, unique=True)
 
     def __str__(self):
-        return self.vidio
+        return self.video
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=100)

@@ -3,14 +3,13 @@ from .models import *
 from embed_video.admin import AdminVideoMixin
 
 # Register your models here.
-
-class YoutubeVidios(AdminVideoMixin, admin.ModelAdmin):
-    list_display = ('video', 'slug')
+class MyModelAdmin(AdminVideoMixin, admin.ModelAdmin):
+    pass
 
 admin.site.register(Carousel)
 admin.site.register(Info)
 admin.site.register(TypeNews)
 admin.site.register(News)
-admin.site.register(Vidios,YoutubeVidios)
+admin.site.register(Vidios,MyModelAdmin)
 admin.site.register(Sponsor)
 admin.site.register(Address)

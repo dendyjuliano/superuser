@@ -1,4 +1,6 @@
 {% load static %}
+{% load embed_video_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,60 +19,62 @@
 </head>
 
 <body>
-    <section class="navbar-1">
-        <nav class="navbar navbar-expand-sm navbar-dark p-0">
-            <div class="container">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                    </ul>
+    <div class="navbar-top fixed-top">
+        <section class="navbar-1">
+            <nav class="navbar navbar-expand-sm navbar-dark p-0">
+                <div class="container">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </section>
-    <section class="navbar-2">
-        <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <div class="container">
-                <a class="navbar-brand " href="#">
-                    <img src="{% static 'images/logo-itb-1.png' %}" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+            </nav>
+        </section>
+        <section class="navbar-2">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
+                <div class="container">
+                    <a class="navbar-brand " href="#">
+                        <img src="{% static 'images/logo-itb-1.png' %}" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown link
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </section>
+            </nav>
+        </section>
+    </div>
     <section class="carousel-1">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators ">
@@ -156,11 +160,150 @@
             </div>
         </div>
     </section>
+    <section class="videos info-1 py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="font-size-08 font-02 font-weight-bold text-center">
+                        Video
+                    </h2>
+                </div>
+                <!-- carousel news -->
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="owl-carousel text-center">
+                            {% for v in videos %}
+                            <div class="item">
+                                {% video v.video as my_video %}
+                                <!-- URL: {{ my_video.url }} -->
+                                <!-- Thumbnail: {{ my_video.thumbnail }} -->
+                                <iframe src="{{ my_video.url }}" width="100%" height="250"></iframe>
+                                {% endvideo %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mt-5">
+                        <a class="btn btn-outline-info btn-sm button-1"
+                            href="https://www.youtube.com/user/itbofficial">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sponsor-1">
+        <div class="container">
+            <div class="row pt-4 pb-5">
+                {% for s in sponsor %}
+                <div class="col p-3">
+                    <img src="{{ s.image.url }}" class="img-fluid" alt="">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="info-panel shadow">
+                <div class="row">
+                    {% for i in '123'|make_list %}
+                    <div class="col-lg">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="https://www.itb.ac.id/images/icons/ganesha-itb-footer.jpg" alt="Employee"
+                                    class="float-left">
+                            </div>
+                            <div class="col-sm-9">
+                                <h6 class="title-info p-0">Kampus ITB Ganesha</h6>
+                                <span class="address-info">Jalan Let. Jen. Purn. Dr. (HC). Mashudi No. 1
+                                    Sumedang - Jawa Barat, Indonesia <br>
+                                    <i class="far fa-envelope"></i> &nbsp; humas_@jatinangor.itb.ac.id
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <footer class="text-center text-lg-start mt-5">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Institute teknologi bandung</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                        voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-dark">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-dark">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center py-5">
+            <div class="container">
+                <div class="sosmed">
+                    <a class="btn-sosmed btn ms-2" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn-sosmed btn ms-2" href=""><i class="fab fa-facebook-square"></i></i></a>
+                    <a class="btn-sosmed btn ms-2" href=""><i class="fab fa-youtube"></i></a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
 
     <!-- <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script> -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
