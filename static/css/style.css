@@ -1,0 +1,95 @@
+body{
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-family: Roboto,sans-serif;
+}
+
+.button-1{
+    background: transparent;
+    border: 1px solid #00316d !important;
+    color: #00316d;
+    text-align: center;
+}
+
+.button-1:hover{
+    background: #00316d;
+    border: 1px solid #00316d !important;
+    color: #ffffff;
+}
+
+.navbar-1 .navbar{
+    background-color: #243238;
+    font-size: 14px;
+}
+
+.navbar-2 .navbar{
+    background-color: #005aab;
+}
+
+.navbar-2 .navbar .collapse .navbar-nav .nav-item .nav-link{
+    color: #ffffff !important;
+    font-size: 16px;
+}
+
+.navbar-2 .navbar .navbar-brand img{
+    width: 250px;
+}
+
+.carousel-1 .carousel-indicators .indicator{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.font-size-08{
+    font-size: 40px;
+    font-weight: 400 !important;
+}
+
+.info-1{
+    background-color: #f1f1f1;
+}
+
+.text-info-1{
+    font-size: 18px;
+    text-align: left;
+}
+
+  .owl-dots {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .owl-dots button.owl-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgb(145, 145, 145) !important;
+    margin: 0 3px;
+  }
+  .owl-dots button.owl-dot:hover {
+    background-color: #00316d !important;
+  }
+  .owl-dots button.owl-dot.active {
+    background-color: #00316d !important;
+  }
+
+  .owl-carousel .item img{
+    height: 200px;
+    object-fit: cover;
+  }
+  .owl-carousel .item .caption h5{
+      font-size: 17px;
+      font-weight: 600;
+  }
+  .owl-carousel .item .caption .caption-badge{
+      text-transform: uppercase;
+      font-size: 12px;
+  }
+
+/* DEKSTOP VERSI */
+@media (min-width: 992px) {
+    .navbar-2 .navbar .navbar-brand img{
+        width: 300px;
+    }
+}    

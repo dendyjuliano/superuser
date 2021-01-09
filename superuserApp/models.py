@@ -30,6 +30,7 @@ class TypeNews(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=100)
     type = models.ForeignKey(TypeNews,on_delete=models.SET_NULL,null=True)
+    image = models.ImageField(upload_to='img_news',null=True)
     date = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=100)
     description = models.TextField(max_length=999)
